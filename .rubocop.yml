@@ -2,3 +2,5 @@ Metrics/MethodLength:
   Max: 20
 Style/ClassVars:
   Enabled: false
+Style/AsciiComments:
+  Enabled: false

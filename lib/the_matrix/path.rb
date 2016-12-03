@@ -4,9 +4,6 @@ module TheMatrix
   class Path
     attr_accessor :start_time, :end_time, :start_node, :end_node
 
-    def initialize
-    end
-
     def start_time=(input)
       time, time_zone = input
       if time_zone

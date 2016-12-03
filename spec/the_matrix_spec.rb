@@ -5,7 +5,15 @@ describe TheMatrix do
     expect(TheMatrix::VERSION).not_to be nil
   end
 
-  it 'does something useful' do
-    expect(false).to eq(true)
+  describe '.root' do
+    it 'returns the correct root path' do
+      expect(TheMatrix.root).to eql((File.dirname __dir__))
+    end
+  end
+
+  describe '.data_path' do
+    it 'returns the correct root path' do
+      expect(TheMatrix.data_path).to eql((File.join TheMatrix.root, 'data'))
+    end
   end
 end

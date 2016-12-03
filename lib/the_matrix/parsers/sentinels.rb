@@ -11,6 +11,7 @@ module TheMatrix
           input = {}
           data.each do |route|
             route_id = route['route_id']
+            indx = route['index'].to_i
             path = TheMatrix::Path.new
             path.start_node = route['node']
             path.start_time = route['time']

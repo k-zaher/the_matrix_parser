@@ -15,7 +15,7 @@ module TheMatrix
         @data = open_and_parse(files)
         create_routes(@data['routes'], @foreign_key)
         data = TheMatrix::Route.parsed_data
-        TheMatrix::Route.clear_data
+        TheMatrix::Route.clear_collector
         data
       end
 

@@ -18,7 +18,7 @@ module TheMatrix
       @@instance_collector
     end
 
-    def self.clear_data
+    def self.clear_collector
       @@instance_collector_mapper = {}
       @@instance_collector = []
     end
