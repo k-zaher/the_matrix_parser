@@ -1,0 +1,4 @@
+Metrics/MethodLength:
+  Max: 20
+Style/ClassVars:
+  Enabled: false
