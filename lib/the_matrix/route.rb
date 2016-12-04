@@ -18,6 +18,15 @@ module TheMatrix
       @@instance_collector
     end
 
+    def self.remove_and_report(id)
+      obj = @@instance_collector_mapper[id.to_i]
+      @@instance_collector.delete(obj)
+      @@instance_collector_mapper[id.to_i] = nil
+
+      p "******* Warning ******* Route ##{id} in #{obj.source}"\
+      ' is invalid and has been IGNORED  *********************'
+    end
+
     def self.clear_collector
       @@instance_collector_mapper = {}
       @@instance_collector = []

@@ -29,9 +29,6 @@ module TheMatrix
 
       def extract_from(data, value, *keys)
         data[value].reject { |k| !keys.include?(k) }.values
-      rescue NoMethodError
-        p "#{value} does not exists in #{data}"
-        [nil] * keys.count
       end
     end
   end
