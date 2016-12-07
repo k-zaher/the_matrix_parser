@@ -1,41 +1,32 @@
 # TheMatrix
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/the_matrix`. To experiment with that code, run `bin/console` for an interactive prompt.
+When the Matrix was first built there was a man born inside that had the ability to write Ruby code the way he wanted, to remake RSpecs and business requirements as he saw fit.  It was this man that freed the first of us and taught us the secret SOA design skills; control Git and you control the future.
 
-TODO: Delete this and the text above, and describe your gem
+The Oracle at the temple of Zion prophesied his return. That is why there are those of us that have spent our entire lives searching the Matrix, looking for him.
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'the_matrix'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install the_matrix
+To we use this code to parse the matrix
 
 ## Usage
 
-TODO: Write usage instructions here
+Run the executable file in the root folder:
 
-## Development
+```ruby
+./bin/the_matrix
+```
+Run the tests using:
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+```ruby
+rspec
+```
+## Requirment:
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+1- Each route has an array of paths. 
+2- Each path has a start_node and an end_node.
+3- The Sentinels data "routes.csv" doesn't guarantee the order of nodes.
+4- Any missing data should be ignored and reported as a warning.
 
-## Contributing
+## TODO
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/the_matrix. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+1- Parse each line in the csv or json separately instead of loading the entire file in memory (this should be done if there is a huge amount of data).
 
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
+2- Use a data store as Mongo or even Redis to avoid storing all outputs in Memory, which can also decrease the memory overhead.
